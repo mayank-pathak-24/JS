@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button id="orange">Orange</button>   
+<button id="red">Red</button>   
+</body>
+<script>
+//     function makeFunc() {
+//     const name="Mayank"
+//     function displayName()
+//     {
+
+//         console.log(name);
+//     }
+//     return displayName;
+// }
+// const myFunc=makeFunc();
+// myFunc();
+</script>
+<script>
+    // document.getElementById('orange').addEventListener('click',()=>{
+    //     document.body.style.backgroundColor='orange';
+    // })
+    // document.getElementById('red').addEventListener('click',()=>{
+    //     document.body.style.backgroundColor='red';
+    // })
+    function clickhandler(color)
+    {   
+        // document.body.style.background=`${color}`
+       return function()
+        {
+            document.body.style.backgroundColor=`${color}`
+        }
+    }
+    document.getElementById('orange').onclick=clickhandler('orange');
+    document.getElementById('red').onclick=clickhandler('red');
+    
+  
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS with chai aur code</h1>
+    <button id="stop">Stop</button>
+    <script>
+        // setTimeout(function(){
+        //     console.log("Mayank");
+        // },5000)// setTimeout run only once it is different from setInerval
+
+        // const sayMayank=function()
+        // {
+        //     console.log("Mayank Pathak");
+        // }
+        // setTimeout(sayMayank,2000)
+       // document.querySelector('h1').innerHTML="Best JavaScript Series"
+       const changeText=function()
+       {
+        document.querySelector('h1').innerHTML="It is the best javaScript series"
+       }
+       const changeMe=setTimeout(changeText,5000)
+        document.getElementById('stop').addEventListener('click',function(){
+        clearTimeout(changeMe)
+    })
+       
+    </script>
+</body>
+</html>

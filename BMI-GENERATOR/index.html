@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        button{
+            padding: 5px 20px;
+            margin-left: 140px;
+            border-radius: 8px;
+            font-size: larger;
+        }
+        p
+        {
+            font-size: large;
+            font-style: inherit;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .button:hover {background-color: #717671}
+        input{
+            border-radius: 3px;
+            border-color: black;
+            border-style: solid;
+            padding: 6px;
+        }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a target="_blank" href="https://www.youtube.com/@chaiaurcode"
+        >Youtube channel</a
+      >
+    </nav>
+    <div class="container">
+      <h1>BMI Calculator</h1>
+      <form>
+        <p><label>Height in CM: </label><input type="number" id="height" /></p>
+        <p><label>Weight in KG: </label><input type="number" id="weight" /></p>
+        <button class="button">Calculate</button>
+        <div id="results" style=" font-size: x-large; color: rgb(100, 0, 0);"></div>
+        <div id="weight-guide" style=" font-size: x-large; font-style: inherit; font-family: Arial, Helvetica, sans-serif;"></div>
+            <div>
+          <h3>BMI Weight Guide</h3>
+          <p>Under Weight = Less than 18.6</p>
+          <p>Normal Range = 18.6 and 24.9</p>
+          <p>Overweight = Greater than 24.9</p>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="chaiaurcode.js"></script>
+</html>

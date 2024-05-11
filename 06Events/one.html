@@ -1,0 +1,79 @@
+//type,timestamp,defaultPrevented
+//target,toElement,srcElement,currentTaget,
+//clientx,client y, screen x,screeny
+//altkey,ctrlkey,shiftkey,keycode
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id ="image">
+            <li><img src="bird.jpg" alt="photoshop" id="photoshop" width="200px"></li>
+            <li> <img src="bird2.jpg" alt="" id="bird" width="200px"></li>
+            <li><img src="cup.jpg" alt="cup" id="japan" width="200px"></li>
+            <li><img src="mountain.jpg" alt="mountain" width="200px" id="mountain"></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+    <script>
+        // document.getElementById('photoshop').onclick=function(){
+        //     alert("bird")
+        // }
+    //   const cup= document.getElementById('japan')
+    //   cup.addEventListener('click',function(){
+    //     alert("cup")
+    //   })
+      //attachEvent// run interenet explorer
+      //jQuery//.onEventlistner 
+        // document.getElementById('image').addEventListener('click',function(e){
+        //     console.log("Clicked inside the ul");
+        //     e.stopPropagation()
+
+        // })//false is default it is "1.event propogation or  bubbling(inner to outer),2. capturing mode"
+        // document.getElementById('japan').addEventListener('click',function(e){
+           
+        //     console.log("Click on the cup");
+        //     e.stopPropagation()
+
+        // })
+
+
+        // document.getElementById('google').addEventListener('click',function(e){
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        //     console.log("google clicked");
+        // })
+
+
+        // document.querySelector('#image').addEventListener('click',function(e){
+        //     if(e.target.tagName==='IMG')
+        //     {
+        //         console.log(e.target.tagName.id);
+        //         let removeIt=e.target.parentNode
+        //         removeIt.remove()
+        //     }
+        // })
+
+
+        // document.querySelector('#image').addEventListener('click',function(e){
+        //     //console.log(e.target.parentNode);//give the parent node
+        //     console.log(e.target.tagName)
+        //     let removeIt=e.target.parentNode
+        //     //removeIt.remove();
+        //     removeIt.parentNode.removeChild(removeIt)
+        // })
+            document.querySelector('#image').addEventListener('click',function(e){
+                if(e.target.tagName==='IMG')
+                {
+                    let removeIt=e.target.parentNode
+                    removeIt.remove();
+                }
+            })
+    </script>
+</body>
+</html>
